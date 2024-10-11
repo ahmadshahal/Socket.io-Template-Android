@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.jetbrainsKotlinSerialization)
 }
 
 android {
@@ -66,4 +67,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.compose)
+    implementation(libs.koin.core)
+
+    implementation(libs.androidx.navigation.compose)
+
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.socket.io.client)
 }
