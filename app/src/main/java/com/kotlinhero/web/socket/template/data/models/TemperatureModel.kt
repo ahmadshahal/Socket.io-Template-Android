@@ -1,5 +1,8 @@
 package com.kotlinhero.web.socket.template.data.models
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 /**
  * A data class representing a temperature measurement.
  *
@@ -10,7 +13,11 @@ package com.kotlinhero.web.socket.template.data.models
  * @property value The numeric value of the temperature.
  * @property unit The unit of measurement for the temperature (e.g., Celsius, Fahrenheit).
  */
+@Serializable
 data class TemperatureModel(
+    @SerialName("value")
     val value: Float,
+
+    @SerialName("unit")
     val unit: String,
 )
