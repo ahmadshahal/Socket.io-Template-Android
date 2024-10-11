@@ -31,6 +31,15 @@ enum class SocketIOEvent(val key: String) {
     CONNECT_ERROR("connect_error"),
 
     /**
+     * Represents an event that indicates the Socket.IO client is attempting
+     * to reconnect to the server.
+     *
+     * This event is triggered when the client has lost its connection to the
+     * server and is actively trying to reconnect.
+     */
+    RECONNECTING("reconnecting"),
+
+    /**
      * Represents the event used to subscribe to a specific channel or topic.
      * This is typically used to start receiving updates or data from the server for that channel.
      */

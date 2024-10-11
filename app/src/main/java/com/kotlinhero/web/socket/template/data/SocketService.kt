@@ -123,6 +123,12 @@ class SocketService(private val json: Json) {
             _connectionFlow.update { SocketConnection.Disconnected }
         }
 
+        // Listen for the reconnect event and update the connection flow state.
+        socket?.on(SocketIOEvent.RECONNECTING.key) {
+            Log.d(TAG, "CONNECT_ERROR")
+            _connectionFlow.update { SocketConnection.Connecting }
+        }
+
         // Listen for temperature data received from the server and emit the event into the shared flow.
         socket?.on(SocketIOEvent.RECEIVE_TEMPERATURE.key) { received ->
             val data = received[0].toString()
