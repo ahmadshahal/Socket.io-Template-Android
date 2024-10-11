@@ -14,8 +14,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
-import java.util.logging.Level
-import java.util.logging.Logger
 
 /**
  * SocketService is responsible for managing the WebSocket connection and handling communication
