@@ -36,7 +36,7 @@ fun HomeScreen(navController: NavController) {
         topBar = {
             TopAppBar(
                 title = {
-                    Text("Home Screen")
+                    Text(text = "Home Screen")
                 }
             )
         }
@@ -49,7 +49,7 @@ fun HomeScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                "Welcome to the fourth Mobile-Dev-Meetup",
+                text = "Welcome to the fourth Mobile-Dev-Meetup",
                 style = MaterialTheme.typography.titleMedium,
             )
             Spacer(modifier = Modifier.height(24.dp))
@@ -58,7 +58,7 @@ fun HomeScreen(navController: NavController) {
                     navController.navigate(Destination.TemperatureScreen.route)
                 }
             ) {
-                Text("View Temperature")
+                Text(text = "View Temperature")
             }
         }
     }

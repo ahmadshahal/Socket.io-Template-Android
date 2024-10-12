@@ -52,7 +52,7 @@ class SocketService(private val json: Json) {
             .builder()
             .setExtraHeaders(extraHeaders)
             .build()
-        socket = IO.socket("https://Mobile-Dev-Meetup/2024-10", options)
+        socket = IO.socket("http://192.168.81.182:3001", options)
     }
 
     /**

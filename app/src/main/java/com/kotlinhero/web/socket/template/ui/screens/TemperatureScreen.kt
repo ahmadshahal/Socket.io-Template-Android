@@ -59,7 +59,7 @@ fun TemperatureScreen(
                     }
                 },
                 title = {
-                    Text("Temperature Screen")
+                    Text(text = "Temperature Screen")
                 }
             )
         }
@@ -73,17 +73,17 @@ fun TemperatureScreen(
             when (socketConnection) {
                 SocketConnection.Connecting -> CircularProgressIndicator()
                 SocketConnection.Disconnected -> Text(
-                    "Socket Disconnected",
+                    text = "Socket Disconnected",
                     style = MaterialTheme.typography.titleMedium,
                 )
                 SocketConnection.Connected -> Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
-                        "Socket is connected, expecting values soon",
+                        text = "Socket is connected, expecting values soon",
                         style = MaterialTheme.typography.titleMedium,
                     )
                     temperature?.let {
                         Spacer(modifier = Modifier.height(16.dp))
-                        Text("Temperature: ${temperature.value}${temperature.unit}")
+                        Text(text = "Temperature: ${temperature.value}${temperature.unit}")
                     }
                 }
             }
